@@ -43,6 +43,16 @@ test('hangperson title renders - RTL', () => {
   expect(queryByText('hamburger')).toBeFalsy()
 })
 
+test('RTL - debug', () => {
+  const { getByText, queryByText, debug } = render(<App />)
+  
+  // make sure you don't pass the --silent switch
+  debug()
+
+  expect(getByText('hangperson')).toBeTruthy()
+  expect(queryByText('hamburger')).toBeFalsy()
+})
+
 test('guess a word submission creates gameboard', () => {
   const { getAllByText, getByLabelText, getByText  } = render(<App />)
 
