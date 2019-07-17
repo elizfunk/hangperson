@@ -197,7 +197,7 @@ class App extends Component {
   render () {
     return (
       <Wrapper>
-        <GameTitle data-testid='game-title'>hangperson</GameTitle>
+        <GameTitle data-unit-id='game-title'>hangperson</GameTitle>
         <Columns>
           <GamePlay>
             <WordToGuess

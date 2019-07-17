@@ -27,13 +27,13 @@ test('hangperson title renders - RTL', () => {
 test('hangperson title renders - Enzyme - shallow', () => {
   const wrapper = shallow(<App />)
 
-  expect(wrapper.find('[data-testid="game-title"]')).toHaveLength(1)
+  expect(wrapper.find('[data-unit-id="game-title"]')).toHaveLength(1)
 })
 
 test('hangperson title renders - Enzyme - mount', () => {
   const wrapper = mount(<App />)
 
-  expect(wrapper.find('[data-testid="game-title"]')).toHaveLength(3)
+  expect(wrapper.find('[data-unit-id="game-title"]')).toHaveLength(3)
 })
 
 test('hangperson title renders - RTL', () => {
@@ -61,7 +61,7 @@ test('guess a word submission creates gameboard', () => {
   fireEvent.change(inputWordTarget, { target: { value: 'bird' } })
   fireEvent.click(buttonWordTarget)
 
-  expect(getAllByText('_').length).toEqual(4)
+  expect(getAllByText('_')).toHaveLength(4)
 })
 
 test('guess a word submission creates gameboard - Enzyme', () => {
